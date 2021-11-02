@@ -36,10 +36,11 @@ for i in range(len(imgIds)):
         if ann['image_id'] == imgIds[0]:
             catIds.append(ann['category_id'])
 
-        # m = coco.annToMask(ann)
-        # print(m.shape)
-        # plt.imshow(m)
-        # plt.show()
+        m = coco.annToMask(ann)
+
+        print(m.shape)
+        plt.imshow(m)
+        plt.show()
 
     plt.imshow(I)
     #plt.axis('off')
